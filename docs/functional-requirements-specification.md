@@ -610,3 +610,40 @@ AI chatbot functionality, CRM-based customer segmentation, and other proposed V2
 - AC-03: Given configured monitoring conditions are met, when the system evaluates available interaction data, then it displays an alert where the configured functionality supports it.
 - AC-04: Given an authorised user updates crisis-related information, when the changes are valid and saved, then the system displays the updated information.
 - AC-05: Given a user lacks the required permission, when the user attempts a restricted crisis-management action, then the system prevents the unauthorised action.
+
+### FR-017: Canned Responses
+
+**Requirement Description:** The system shall allow authorised users to create, manage, and use predefined response templates when replying to customer interactions through supported channels.
+
+**Preconditions:**
+- The user has successfully logged in.
+- The user has permission to access canned responses.
+- The user has permission to reply to the relevant interaction when using a template.
+
+**Trigger:** An authorised user opens the canned responses feature or selects a predefined response while composing a reply.
+
+**Expected System Behaviour:**
+1. The system shall display available canned responses according to the user's permissions.
+2. The system shall allow authorised users to create a canned response with a title and response content.
+3. The system shall allow authorised users to edit or deactivate existing canned responses, subject to their permissions.
+4. The system shall allow users to search or browse available canned responses.
+5. The system shall allow users to insert a selected canned response into the reply editor.
+6. The system shall allow users to review and edit the inserted response before submitting it.
+7. The system shall validate required fields when a canned response is created or updated.
+8. The system shall display an appropriate message when a canned response cannot be saved or retrieved.
+9. The system shall apply channel-specific validation when a canned response is used in a reply.
+
+**Postconditions:**
+- Valid canned responses are saved and available to authorised users.
+- Selected templates can be inserted into the reply editor without automatically sending the response.
+
+**Priority:** Should Have
+
+**Related Business Requirement:** BR-12 — Canned response management.
+
+**Acceptance Criteria:**
+- AC-01: Given an authorised user has permission to manage canned responses, when the user creates a template with valid required fields, then the system saves it.
+- AC-02: Given a canned response exists, when an authorised user edits or deactivates it, then the system saves the permitted change.
+- AC-03: Given available canned responses exist, when a user searches or browses the feature, then the system displays matching accessible templates.
+- AC-04: Given a user is composing a reply, when the user selects a canned response, then the system inserts its content into the reply editor.
+- AC-05: Given a canned response has been inserted, when the user reviews it, then the user can edit the response before submitting it, and the template is not sent automatically.
