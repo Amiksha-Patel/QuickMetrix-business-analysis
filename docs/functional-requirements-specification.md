@@ -282,3 +282,40 @@ AI chatbot functionality, CRM-based customer segmentation, and other proposed V2
 - AC-03: Given an authorised user has permission to manage tags, when the user adds a valid tag, then the system associates the tag with the interaction.
 - AC-04: Given an interaction has existing tags, when an authorised user removes a tag and saves the change, then the removed tag is no longer associated with the interaction.
 - AC-05: Given an update fails, when the system processes the change, then it displays an appropriate message and retains the previously saved values.
+
+### FR-008: Manual Ticket Creation
+
+**Requirement Description:** The system shall allow authorised users to manually create a ticket from an available customer interaction or brand mention.
+
+**Preconditions:**
+- The user has successfully logged in.
+- The user has permission to create tickets.
+- An eligible interaction is available, or the user has access to the manual ticket creation function.
+
+**Trigger:** The user selects an interaction and chooses to create a ticket, or initiates ticket creation through the available interface.
+
+**Expected System Behaviour:**
+1. The system shall allow authorised users to initiate ticket creation manually.
+2. The system shall allow users to associate a ticket with an existing interaction, where applicable.
+3. The system shall capture the required ticket information, such as subject or summary, description, source channel, and relevant interaction details where available.
+4. The system shall validate mandatory fields before saving the ticket.
+5. The system shall generate a unique ticket reference upon successful creation.
+6. The system shall assign the ticket an initial status according to the configured workflow.
+7. The system shall display a confirmation message and the newly created ticket details after successful creation.
+8. The system shall display an appropriate validation or error message if the ticket cannot be created.
+9. Ticket creation shall be initiated by an authorised user; automatic ticket creation is outside the scope of V1.0.
+
+**Postconditions:**
+- A successfully created ticket is stored with a unique reference and initial status.
+- The ticket is associated with the selected interaction when applicable.
+
+**Priority:** Must Have
+
+**Related Business Requirement:** BR-04 — Manual ticket creation and management.
+
+**Acceptance Criteria:**
+- AC-01: Given an authorised user has access to an eligible interaction, when the user initiates ticket creation, then the system opens the ticket creation interface.
+- AC-02: Given mandatory ticket fields are incomplete, when the user attempts to save the ticket, then the system identifies the missing required information.
+- AC-03: Given all mandatory fields contain valid information, when the user saves the ticket, then the system creates the ticket and generates a unique reference.
+- AC-04: Given a ticket is created successfully, when the system confirms the creation, then the ticket displays its initial configured status.
+- AC-05: Given a ticket is created from an existing interaction, when the ticket is saved, then the system maintains the association between the ticket and that interaction.
