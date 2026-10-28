@@ -54,3 +54,19 @@ These capabilities may be considered as part of the proposed V2.0 roadmap.
 ### 3.3 Scope Boundary
 
 V1.0 focuses on centralised interaction monitoring, manual ticket management, customer response workflows, sentiment tracking, and consolidated reporting. The proposed V2.0 enhancements will be documented separately and are not considered delivered functionality.
+
+## 4. Stakeholder Identification
+
+| Stakeholder | Role and Responsibility |
+|---|---|
+| Project Sponsor | Provides business direction, approves key project decisions, and ensures alignment with business objectives. |
+| Project Manager | Coordinates project activities, timelines, resources, risks, and stakeholder communication. |
+| ORM Analyst | Monitors customer interactions and brand mentions, analyses sentiment, manages tickets, and prepares reports. |
+| ORM Team Lead / Manager | Oversees ORM operations, monitors team performance, manages escalations, and reviews reporting outputs. |
+| Customer Care Agent | Handles assigned tickets and responds to customer interactions through supported channels. |
+| Platform Administrator | Manages user accounts, roles, permissions, and platform configuration. |
+| Business Analyst | Elicits, analyses, documents, and validates business requirements and coordinates with stakeholders to clarify expectations. |
+| Development Team | Uses approved requirements to design, configure, and develop the planned functionality. |
+| QA / Testing Team | Verifies that the solution meets documented requirements and identifies defects during testing. |
+
+**Note:** These stakeholders represent the proposed project structure for this portfolio case study. Their inclusion does not imply that the project was implemented in a live production environment.
