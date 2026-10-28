@@ -73,3 +73,37 @@ AI chatbot functionality, CRM-based customer segmentation, and other proposed V2
 - AC-03: Given a user submits incomplete required login fields, when the form is submitted, then the system prompts the user to complete the required fields.
 - AC-04: Given an inactive account attempts to log in, when the credentials are submitted, then the system denies access.
 - AC-05: Given authentication fails, then the system does not grant access to protected platform functionality.
+
+### FR-002: Password Reset
+
+**Requirement Description:** The system shall allow registered users to initiate a password reset when they cannot remember their current password.
+
+**Preconditions:**
+- The user has an account registered with the system.
+- The user can access the registered email address or the configured password recovery method.
+
+**Trigger:** The user selects the *Forgot Password* option on the login page.
+
+**Expected System Behaviour:**
+1. The system shall provide a password recovery option on the login page.
+2. The system shall allow the user to submit the registered email address or other configured account identifier.
+3. The system shall initiate the password recovery process using the configured verification method.
+4. The system shall provide an appropriate confirmation message after the request is submitted without unnecessarily revealing whether an account exists.
+5. The system shall allow the user to set a new password after successful verification.
+6. The system shall validate the new password against the configured password policy.
+7. The system shall confirm when the password reset is completed successfully.
+
+**Postconditions:**
+- After a successful reset, the user can log in using the new password.
+- If verification fails or the reset process is incomplete, the password remains unchanged.
+
+**Priority:** Must Have
+
+**Related Business Requirement:** BR-12 — Role-based access and platform user administration.
+
+**Acceptance Criteria:**
+- AC-01: Given a user is on the login page, when they select *Forgot Password*, then the system displays the password recovery process.
+- AC-02: Given a user submits a recovery request, then the system displays a confirmation message without unnecessarily disclosing account existence.
+- AC-03: Given a user completes the required verification, when they enter a valid new password, then the system updates the password.
+- AC-04: Given a user enters a password that does not meet the configured policy, then the system rejects it and explains the password requirements.
+- AC-05: Given a password reset is completed successfully, when the user logs in with the new password, then the system grants access if the account is active.
