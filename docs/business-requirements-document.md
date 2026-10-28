@@ -36,7 +36,7 @@ The QuickMetrix V1.0 case study includes the following capabilities:
 - Publishing workflows and content calendar
 - Crisis management and a real-time command centre
 
-**Ticket management clarification:** Authorised users create tickets, assign them to agents, and update statuses manually. Automated ticket creation and AI-based ticket assignment are excluded from V1.0.
+**Ticket management clarification:** Customer interactions and brand mentions may be retrieved from configured, supported digital channels. Creating a ticket from an interaction, assigning it to an agent, and updating its status remain manual activities in V1.0.
 
 ### 3.2 Out of Scope — V1.0
 
@@ -46,7 +46,7 @@ The following capabilities are excluded from the V1.0 scope:
 - CRM enhancements and CRM-based customer segmentation
 - Native mobile application development
 - Influencer management enhancements
-- Third-party integration enhancements planned for V2.0
+- Additional third-party integrations proposed for V2.0, beyond the channel connections required for V1.0.
 - Help Center enhancements planned for V2.0
 
 These capabilities may be considered as part of the proposed V2.0 roadmap.
