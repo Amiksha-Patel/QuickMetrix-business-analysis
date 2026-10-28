@@ -129,3 +129,17 @@ QuickMetrix V1.0 will be considered successful when the following criteria are m
 **Validation approach:** These criteria will be evaluated through requirements reviews, functional testing, and user acceptance testing (UAT). Quantitative performance targets should be defined separately where required.
 
 **Portfolio disclaimer:** These are proposed success criteria. They do not represent verified results from a live production implementation.
+
+## 8. Business and Project Risks
+
+| Risk ID | Risk Description | Potential Impact | Proposed Mitigation |
+|---|---|---|---|
+| R-01 | Changes to third-party platform APIs or access permissions | Some interactions or brand mentions may not be available in the platform. | Validate supported channels, API access, and permissions during requirements analysis. |
+| R-02 | Incomplete or inconsistent interaction data | Sentiment analysis and reporting may be less reliable. | Define data validation rules and document data limitations. |
+| R-03 | Unclear ticket ownership or escalation rules | Delayed responses and inconsistent ticket handling. | Document ticket statuses, assignment responsibilities, and escalation criteria. |
+| R-04 | Incorrect role or permission configuration | Unauthorised access to platform functions or data. | Define role-based access requirements and validate permissions during testing. |
+| R-05 | Reporting requirements are incomplete or ambiguous | Reports may not meet stakeholder expectations. | Confirm report fields, filters, metrics, and delivery schedules with stakeholders. |
+| R-06 | Scope expansion during V1.0 delivery | Increased complexity and potential schedule delays. | Maintain an agreed scope baseline and assess proposed changes through change control. |
+| R-07 | Insufficient stakeholder participation during validation | Requirements may remain unclear or unverified. | Schedule stakeholder reviews and UAT activities at appropriate project milestones. |
+
+**Note:** These risks are identified for planning purposes within this portfolio case study. They are not documented incidents from a live production implementation.
