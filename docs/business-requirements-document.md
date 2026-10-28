@@ -169,3 +169,18 @@ QuickMetrix V1.0 will be considered successful when the following criteria are m
 - **V1.0 Scope Boundary:** AI chatbot functionality, CRM-based customer segmentation, and other planned V2.0 enhancements are excluded from V1.0.
 - **Implementation Status:** This document describes a proposed portfolio case study. It does not establish that the solution has been deployed or that business benefits have been measured.
 
+## 11. Document Information
+
+| Attribute | Details |
+|---|---|
+| Document Title | Business Requirements Document (BRD) — QuickMetrix V1.0 |
+| Project ID | QM-2026-001 |
+| Document Version | 1.0 |
+| Document Status | Portfolio Case Study — Draft for Review |
+| Project Methodology | Waterfall |
+| Scope | QuickMetrix V1.0 |
+| Related Roadmap | Proposed QuickMetrix V2.0 enhancements |
+| Prepared By | Amiksha Patel |
+| Purpose | To document the business problem, objectives, scope, stakeholders, business requirements, assumptions, success criteria, risks, dependencies, and limitations. |
+
+**Document Status Note:** This BRD is part of a Business Analysis portfolio case study developed for learning and demonstration purposes. It is not presented as an approved document from a live production project.
