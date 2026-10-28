@@ -33,17 +33,27 @@ An Agile approach will be used to organise proposed enhancements into user stori
 
 ## 5. Scope
 
-**Scope clarification:** The final V1.0 portfolio scope specifies manual ticket creation and manual assignment. ORM analysts or authorised users create tickets and assign them to agents based on their assessment of incoming interactions. Ticket status is updated manually as the interaction progresses. Automated ticket creation and AI-based ticket assignment are excluded from V1.0.
+**Scope clarification:** Ticket creation, assignment, and status updates are performed manually by authorised users. Automated ticket creation and AI-based ticket assignment are excluded from V1.0.
 
 ### In Scope — V1.0 Case Study
 
 - User login and role-based access
-- Unified inbox and interaction filtering
+- Password reset and user profile management
+- Platform user administration
+- Unified inbox with a default view of the most recent week
+- Interaction filtering and advanced search
 - Sentiment and tag management
-- Manual ticket creation, assignment, and status tracking
-- Responses across supported channels
-- Reporting and publishing workflows
-- Crisis management and canned responses
+- Manual ticket creation, manual assignment, and manual status updates
+- Bulk ticket actions
+- Ticket escalation
+- Notifications and alerts
+- Ticket audit trail and activity logs
+- Multi-channel customer responses
+- Reporting and analytics
+- Scheduled report delivery
+- Publishing workflows and content calendar
+- Crisis management and real-time command centre
+- Canned responses
 
 ### Proposed for V2.0
 
