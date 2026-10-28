@@ -456,3 +456,39 @@ AI chatbot functionality, CRM-based customer segmentation, and other proposed V2
 - AC-03: Given a ticket has multiple recorded activities, when an authorised user views its history, then the activities appear in chronological order.
 - AC-04: Given a user lacks permission to view ticket activity history, when the user attempts to access it, then the system prevents unauthorised access.
 - AC-05: Given an authorised user opens a ticket's activity history, when the history is available, then the system displays the recorded activities without providing standard-interface options to modify or delete those records.
+
+### FR-013: Reporting and Analytics
+
+**Requirement Description:** The system shall allow authorised users to view and generate reports on customer interactions, ticket activity, sentiment, and other available operational metrics.
+
+**Preconditions:**
+- The user has successfully logged in.
+- The user has permission to access reporting and analytics.
+- Relevant interaction and ticket data is available in the system.
+
+**Trigger:** The user opens the reporting module and selects a report or specifies reporting criteria.
+
+**Expected System Behaviour:**
+1. The system shall provide access to available reports and analytical dashboards according to the user's permissions.
+2. The system shall allow users to filter reports using supported criteria, such as date range, channel, sentiment, tags, and ticket status.
+3. The system shall display relevant metrics based on the selected report and available data.
+4. The system shall allow users to view interaction and ticket trends over a selected period, where supported by the report.
+5. The system shall reflect the selected filters in the displayed report results.
+6. The system shall allow users to export reports in supported file formats, where export functionality is available.
+7. The system shall display an appropriate message when report data is unavailable or no records match the selected criteria.
+8. The system shall restrict report access and data visibility according to configured user permissions.
+
+**Postconditions:**
+- The user can view report results that reflect the selected reporting criteria.
+- Reports and exports, where available, contain data the user is authorised to access.
+
+**Priority:** Must Have
+
+**Related Business Requirement:** BR-08 — Reporting and analytics.
+
+**Acceptance Criteria:**
+- AC-01: Given an authorised user opens the reporting module, when available reports are loaded, then the system displays the reports accessible to that user.
+- AC-02: Given report data is available, when the user selects a supported date range or filter, then the system displays results matching the selected criteria.
+- AC-03: Given interaction or ticket data exists for the selected period, when the user opens a relevant report, then the system displays the available metrics.
+- AC-04: Given report export is supported, when the user requests an export, then the system generates the report in a supported format.
+- AC-05: Given no records match the selected reporting criteria, when the report is generated, then the system displays an appropriate empty-state message.
