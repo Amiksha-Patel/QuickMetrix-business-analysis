@@ -420,3 +420,39 @@ AI chatbot functionality, CRM-based customer segmentation, and other proposed V2
 
 **Postconditions:**
 - A successfully submitted response is recorded against the relevant interaction or ticket where
+
+### FR-012: Ticket Audit Trail and Activity Logs
+
+**Requirement Description:** The system shall maintain an activity history for relevant ticket actions to support traceability and accountability.
+
+**Preconditions:**
+- The user has successfully logged in.
+- The ticket exists in the system.
+- The user has permission to access the relevant ticket or its activity history.
+
+**Trigger:** A user performs a supported action on a ticket, or an authorised user opens the ticket's activity history.
+
+**Expected System Behaviour:**
+1. The system shall record supported ticket activities, such as ticket creation, assignment changes, status updates, escalations, and responses where applicable.
+2. Each recorded activity shall include available details such as the action performed, the user responsible, and the date and time.
+3. The system shall associate each activity record with the relevant ticket.
+4. The system shall display the available activity history to authorised users.
+5. The system shall present activity records in chronological order.
+6. The system shall restrict access to activity history according to configured user permissions.
+7. The system shall prevent ordinary users from directly modifying or deleting recorded activity history through the standard interface.
+8. The system shall display an appropriate message if the activity history cannot be retrieved.
+
+**Postconditions:**
+- Supported ticket activities are recorded with available audit details.
+- Authorised users can review the recorded history for a ticket.
+
+**Priority:** Must Have
+
+**Related Business Requirement:** BR-07 — Ticket activity tracking and audit trail.
+
+**Acceptance Criteria:**
+- AC-01: Given a supported ticket action is completed, when the system records the activity, then the activity is associated with the relevant ticket.
+- AC-02: Given activity details are available, when an authorised user views the history, then the system displays the action, responsible user, and timestamp where available.
+- AC-03: Given a ticket has multiple recorded activities, when an authorised user views its history, then the activities appear in chronological order.
+- AC-04: Given a user lacks permission to view ticket activity history, when the user attempts to access it, then the system prevents unauthorised access.
+- AC-05: Given an authorised user opens a ticket's activity history, when the history is available, then the system displays the recorded activities without providing standard-interface options to modify or delete those records.
