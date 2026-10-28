@@ -107,3 +107,37 @@ AI chatbot functionality, CRM-based customer segmentation, and other proposed V2
 - AC-03: Given a user completes the required verification, when they enter a valid new password, then the system updates the password.
 - AC-04: Given a user enters a password that does not meet the configured policy, then the system rejects it and explains the password requirements.
 - AC-05: Given a password reset is completed successfully, when the user logs in with the new password, then the system grants access if the account is active.
+
+### FR-003: User Profile Management
+
+**Requirement Description:** The system shall allow authenticated users to view their profile information and update permitted profile fields.
+
+**Preconditions:**
+- The user has successfully logged in.
+- The user has an active account.
+
+**Trigger:** The user opens the profile section from the platform.
+
+**Expected System Behaviour:**
+1. The system shall display the authenticated user's available profile information.
+2. The system shall allow the user to edit permitted fields, such as display name and contact details, where configured.
+3. The system shall validate updated information before saving changes.
+4. The system shall save valid changes and display a confirmation message.
+5. The system shall display an appropriate error message if the update fails.
+6. The system shall prevent users from changing restricted fields, roles, or permissions through their own profile.
+7. The system shall retain existing information when an update fails.
+
+**Postconditions:**
+- Valid profile changes are saved and displayed to the user.
+- Unauthorised changes are rejected.
+
+**Priority:** Must Have
+
+**Related Business Requirement:** BR-12 — Role-based access and platform user administration.
+
+**Acceptance Criteria:**
+- AC-01: Given an authenticated user opens their profile, when the profile loads, then the system displays the user's available profile information.
+- AC-02: Given a user edits a permitted field with valid information, when they save the changes, then the system stores and displays the updated information.
+- AC-03: Given a user enters invalid information, when they attempt to save, then the system rejects the invalid data and displays an appropriate message.
+- AC-04: Given a user attempts to change a restricted field or their own role, then the system prevents the unauthorised change.
+- AC-05: Given a profile update fails, then the system retains the previously saved information.
