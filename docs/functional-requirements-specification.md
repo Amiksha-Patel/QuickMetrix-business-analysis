@@ -247,3 +247,38 @@ AI chatbot functionality, CRM-based customer segmentation, and other proposed V2
 - AC-03: Given multiple filters are supported, when a user applies more than one filter, then the system displays interactions matching the combined criteria.
 - AC-04: Given filters have been applied, when the user clears them, then the system restores the default inbox view.
 - AC-05: Given no interactions match the selected search or filters, when the search is executed, then the system displays an appropriate empty-state message.
+
+### FR-007: Sentiment and Tag Management
+
+**Requirement Description:** The system shall allow authorised users to view and manage sentiment labels and tags associated with interactions.
+
+**Preconditions:**
+- The user has successfully logged in.
+- The user has permission to access the relevant interactions.
+- Interaction records are available in the system.
+
+**Trigger:** The user opens an interaction or chooses to review or update its sentiment label or tags.
+
+**Expected System Behaviour:**
+1. The system shall display the sentiment label and tags associated with an interaction, where available.
+2. The system shall allow authorised users to update the sentiment label of an interaction.
+3. The system shall allow authorised users to add or remove tags from an interaction.
+4. The system shall display the updated sentiment label and tags after the changes are saved.
+5. The system shall validate user permissions before allowing changes.
+6. The system shall display an appropriate message if an update cannot be saved.
+7. The system shall retain the existing values if an update fails.
+
+**Postconditions:**
+- The interaction displays the saved sentiment label and tags.
+- Unsuccessful updates do not overwrite the existing saved values.
+
+**Priority:** Must Have
+
+**Related Business Requirement:** BR-03 — Sentiment and tag management.
+
+**Acceptance Criteria:**
+- AC-01: Given an interaction has a sentiment label, when an authorised user opens it, then the system displays the available sentiment label.
+- AC-02: Given an authorised user has permission to update sentiment, when the user selects and saves a new sentiment label, then the system displays the updated label.
+- AC-03: Given an authorised user has permission to manage tags, when the user adds a valid tag, then the system associates the tag with the interaction.
+- AC-04: Given an interaction has existing tags, when an authorised user removes a tag and saves the change, then the removed tag is no longer associated with the interaction.
+- AC-05: Given an update fails, when the system processes the change, then it displays an appropriate message and retains the previously saved values.
