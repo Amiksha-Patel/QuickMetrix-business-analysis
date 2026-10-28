@@ -356,3 +356,41 @@ AI chatbot functionality, CRM-based customer segmentation, and other proposed V2
 - AC-03: Given a user has permission to update ticket statuses, when the user selects a permitted status and saves the change, then the system updates the ticket status.
 - AC-04: Given an invalid assignee or status is selected, when the user attempts to save the change, then the system displays an appropriate validation message.
 - AC-05: Given an assignment or status update fails, when the system processes the request, then the previously saved values remain unchanged.
+
+### FR-010: Ticket Escalation and Notifications
+
+**Requirement Description:** The system shall allow authorised users to escalate tickets and notify relevant users about configured ticket events.
+
+**Preconditions:**
+- The user has successfully logged in.
+- The user has permission to access the relevant ticket.
+- The ticket exists in the system.
+- Notification settings and escalation rules, where applicable, are configured.
+
+**Trigger:** An authorised user initiates a ticket escalation, or a configured ticket event triggers a notification.
+
+**Expected System Behaviour:**
+1. The system shall allow authorised users to escalate a ticket according to the configured escalation workflow.
+2. The system shall capture the escalation details required by the configured process, such as the escalation reason and destination, where applicable.
+3. The system shall save the escalation details against the relevant ticket.
+4. The system shall notify designated users about configured ticket events, such as ticket assignment, escalation, or status changes.
+5. The system shall deliver notifications through the channels enabled in the system configuration.
+6. The system shall display an appropriate confirmation when an escalation is saved successfully.
+7. The system shall display an appropriate message if an escalation cannot be saved.
+8. The system shall respect user permissions and configured notification preferences.
+9. The system shall not assume that a notification has been delivered successfully unless delivery confirmation is available.
+
+**Postconditions:**
+- Successfully escalated tickets retain the recorded escalation details.
+- Notifications are generated for applicable configured events, subject to system settings and delivery availability.
+
+**Priority:** Must Have
+
+**Related Business Requirement:** BR-05 — Ticket escalation and notifications.
+
+**Acceptance Criteria:**
+- AC-01: Given an authorised user has access to a ticket, when the user initiates an escalation with valid required details, then the system saves the escalation.
+- AC-02: Given an escalation requires mandatory information, when the user submits incomplete details, then the system identifies the missing information.
+- AC-03: Given a configured ticket event occurs, when notification rules apply, then the system generates a notification for the designated recipient.
+- AC-04: Given a user is not authorised to perform an escalation, when the user attempts the action, then the system prevents the unauthorised change.
+- AC-05: Given an escalation cannot be saved, when the system processes the request, then it displays an appropriate error message and does not record the unsuccessful change as completed.
