@@ -158,3 +158,14 @@ QuickMetrix V1.0 will be considered successful when the following criteria are m
 | DEP-08 | Configured publishing and response-channel access | Required to validate supported publishing workflows and customer response capabilities. |
 
 **Note:** These dependencies are assumptions for planning and validating the proposed V1.0 solution. Their actual availability has not been verified through a live implementation.
+
+## 10. Project Limitations
+
+- **Platform Coverage:** Monitoring is limited to digital channels supported and configured for the solution.
+- **Data Availability:** Interaction monitoring and reporting depend on the availability, completeness, and quality of data provided by connected platforms.
+- **Manual Ticket Operations:** Ticket creation, assignment, and status updates are performed manually by authorised users in V1.0.
+- **Sentiment Interpretation:** Sentiment identification may require human review where context, sarcasm, or ambiguous language affects interpretation.
+- **Reporting Accuracy:** Report accuracy depends on defined metrics, available source data, and correct configuration.
+- **V1.0 Scope Boundary:** AI chatbot functionality, CRM-based customer segmentation, and other planned V2.0 enhancements are excluded from V1.0.
+- **Implementation Status:** This document describes a proposed portfolio case study. It does not establish that the solution has been deployed or that business benefits have been measured.
+
