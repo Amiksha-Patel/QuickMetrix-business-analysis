@@ -212,3 +212,38 @@ AI chatbot functionality, CRM-based customer segmentation, and other proposed V2
 - AC-03: Given interaction records contain source details, when the records are displayed, then the system shows the available channel, author, timestamp, and content information.
 - AC-04: Given no interactions match the selected view, when the inbox loads, then the system displays an appropriate empty-state message.
 - AC-05: Given a configured channel cannot provide interaction data, when the inbox attempts to retrieve that data, then the system communicates the retrieval issue without misrepresenting unavailable data as successfully retrieved.
+
+### FR-006: Interaction Filtering and Advanced Search
+
+**Requirement Description:** The system shall allow authorised users to search and filter interactions in the unified inbox using available search criteria.
+
+**Preconditions:**
+- The user has successfully logged in.
+- The user has permission to access the unified inbox.
+- Interaction records are available in the system.
+
+**Trigger:** The user enters a search term or selects one or more filters in the unified inbox.
+
+**Expected System Behaviour:**
+1. The system shall allow users to search interactions using supported keywords or text fields.
+2. The system shall allow users to filter interactions by available criteria, such as source channel, date range, sentiment, tags, and ticket status where applicable.
+3. The system shall allow users to combine multiple supported filters.
+4. The system shall display interactions that match the entered search criteria and selected filters.
+5. The system shall allow users to clear applied filters and return to the default inbox view.
+6. The system shall display an appropriate message when no interactions match the search or filter criteria.
+7. The system shall apply search and filtering only to interaction data the user is authorised to access.
+
+**Postconditions:**
+- The inbox displays interactions matching the user's search and filter selections.
+- Clearing the filters restores the default inbox view.
+
+**Priority:** Must Have
+
+**Related Business Requirement:** BR-02 — Interaction filtering and search.
+
+**Acceptance Criteria:**
+- AC-01: Given interactions are available, when a user enters a supported keyword, then the system displays matching interactions.
+- AC-02: Given interactions have channel, date, sentiment, or tag information, when a user applies a supported filter, then the system displays interactions matching that filter.
+- AC-03: Given multiple filters are supported, when a user applies more than one filter, then the system displays interactions matching the combined criteria.
+- AC-04: Given filters have been applied, when the user clears them, then the system restores the default inbox view.
+- AC-05: Given no interactions match the selected search or filters, when the search is executed, then the system displays an appropriate empty-state message.
