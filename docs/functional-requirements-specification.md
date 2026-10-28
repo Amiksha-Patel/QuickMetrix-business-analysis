@@ -141,3 +141,38 @@ AI chatbot functionality, CRM-based customer segmentation, and other proposed V2
 - AC-03: Given a user enters invalid information, when they attempt to save, then the system rejects the invalid data and displays an appropriate message.
 - AC-04: Given a user attempts to change a restricted field or their own role, then the system prevents the unauthorised change.
 - AC-05: Given a profile update fails, then the system retains the previously saved information.
+
+### FR-004: Platform User Administration
+
+**Requirement Description:** The system shall allow authorised administrators to create, view, update, activate, and deactivate platform user accounts according to their assigned permissions.
+
+**Preconditions:**
+- The administrator has successfully logged in.
+- The administrator has the required user-management permissions.
+
+**Trigger:** The administrator opens the user administration section.
+
+**Expected System Behaviour:**
+1. The system shall display a list of platform user accounts with available details, such as name, username or email, assigned role, and account status.
+2. The system shall allow authorised administrators to create new user accounts by entering the required information.
+3. The system shall validate mandatory fields and prevent duplicate accounts based on configured unique identifiers.
+4. The system shall allow administrators to update permitted user details and assigned roles.
+5. The system shall allow administrators to activate or deactivate user accounts.
+6. The system shall prevent unauthorised users from accessing user administration functions.
+7. The system shall display a confirmation message after a successful operation and an appropriate error message if an operation fails.
+8. The system shall record relevant user-administration actions in the audit trail, where audit logging is configured.
+
+**Postconditions:**
+- Successful changes are reflected in the relevant user account.
+- Unsuccessful operations do not result in unintended account changes.
+
+**Priority:** Must Have
+
+**Related Business Requirement:** BR-12 — Role-based access and platform user administration.
+
+**Acceptance Criteria:**
+- AC-01: Given an authorised administrator opens user administration, when the page loads, then the system displays the available user accounts.
+- AC-02: Given an administrator enters valid information for a new user, when they submit the form, then the system creates the account.
+- AC-03: Given mandatory information is missing or a unique identifier already exists, when the administrator submits the form, then the system rejects the request and identifies the validation issue.
+- AC-04: Given an administrator updates permitted user details or roles, when the changes are saved successfully, then the system displays the updated information.
+- AC-05: Given an administrator deactivates an account, when the operation succeeds, then the account status changes and the user cannot log in while the account remains inactive.
