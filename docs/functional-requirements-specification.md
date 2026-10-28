@@ -176,3 +176,39 @@ AI chatbot functionality, CRM-based customer segmentation, and other proposed V2
 - AC-03: Given mandatory information is missing or a unique identifier already exists, when the administrator submits the form, then the system rejects the request and identifies the validation issue.
 - AC-04: Given an administrator updates permitted user details or roles, when the changes are saved successfully, then the system displays the updated information.
 - AC-05: Given an administrator deactivates an account, when the operation succeeds, then the account status changes and the user cannot log in while the account remains inactive.
+
+### FR-005: Unified Inbox
+
+**Requirement Description:** The system shall display customer interactions and brand mentions retrieved from configured, supported digital channels in a centralised inbox.
+
+**Preconditions:**
+- The user has successfully logged in.
+- The user has permission to access the unified inbox.
+- The relevant digital channels are configured and accessible.
+
+**Trigger:** The user opens the unified inbox.
+
+**Expected System Behaviour:**
+1. The system shall display interactions retrieved from configured, supported digital channels in a consolidated view.
+2. The system shall display available interaction details, such as message or post content, source channel, author, timestamp, and associated brand, where the source data provides these fields.
+3. The system shall display the most recent week's interactions by default.
+4. The system shall allow users to view available interaction details without navigating to each native platform individually.
+5. The system shall provide access to interaction filtering and search capabilities defined in the relevant requirements.
+6. The system shall indicate when no interactions match the selected view or filters.
+7. The system shall display an appropriate message when interaction data cannot be retrieved from a configured channel.
+8. The system shall restrict access to inbox data according to the user's assigned permissions.
+
+**Postconditions:**
+- The user can view available interactions in a centralised inbox.
+- The displayed interactions reflect the data retrieved from configured channels and the selected view.
+
+**Priority:** Must Have
+
+**Related Business Requirements:** BR-01 — Centralised inbox; BR-02 — Interaction filtering and search.
+
+**Acceptance Criteria:**
+- AC-01: Given a user has inbox access and configured channels are available, when the user opens the inbox, then the system displays retrieved interactions from those channels in one view.
+- AC-02: Given interactions are available from the most recent week, when the user opens the inbox without changing the default view, then the system displays interactions from that period.
+- AC-03: Given interaction records contain source details, when the records are displayed, then the system shows the available channel, author, timestamp, and content information.
+- AC-04: Given no interactions match the selected view, when the inbox loads, then the system displays an appropriate empty-state message.
+- AC-05: Given a configured channel cannot provide interaction data, when the inbox attempts to retrieve that data, then the system communicates the retrieval issue without misrepresenting unavailable data as successfully retrieved.
