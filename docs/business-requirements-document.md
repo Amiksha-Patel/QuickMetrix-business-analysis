@@ -143,3 +143,18 @@ QuickMetrix V1.0 will be considered successful when the following criteria are m
 | R-07 | Insufficient stakeholder participation during validation | Requirements may remain unclear or unverified. | Schedule stakeholder reviews and UAT activities at appropriate project milestones. |
 
 **Note:** These risks are identified for planning purposes within this portfolio case study. They are not documented incidents from a live production implementation.
+
+## 9. Project Dependencies
+
+| Dependency ID | Dependency | Why It Matters |
+|---|---|---|
+| DEP-01 | Access to supported digital-channel APIs and platform permissions | Required to retrieve customer interactions and brand mentions from configured channels. |
+| DEP-02 | Availability and quality of interaction data | Required for interaction monitoring, sentiment analysis, tagging, and reporting. |
+| DEP-03 | Approved user roles and access permissions | Required to configure appropriate access for administrators, ORM analysts, team leads, and customer care agents. |
+| DEP-04 | Stakeholder availability | Required for requirements clarification, scope approval, reviews, and UAT. |
+| DEP-05 | Agreed ticket lifecycle and escalation rules | Required to define consistent ticket creation, assignment, status updates, and escalation workflows. |
+| DEP-06 | Reporting definitions and business metrics | Required to design reports that meet stakeholder expectations. |
+| DEP-07 | Availability of the development and QA teams | Required for solution development, functional testing, defect resolution, and validation. |
+| DEP-08 | Configured publishing and response-channel access | Required to validate supported publishing workflows and customer response capabilities. |
+
+**Note:** These dependencies are assumptions for planning and validating the proposed V1.0 solution. Their actual availability has not been verified through a live implementation.
