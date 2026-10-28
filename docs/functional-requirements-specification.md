@@ -647,3 +647,40 @@ AI chatbot functionality, CRM-based customer segmentation, and other proposed V2
 - AC-03: Given available canned responses exist, when a user searches or browses the feature, then the system displays matching accessible templates.
 - AC-04: Given a user is composing a reply, when the user selects a canned response, then the system inserts its content into the reply editor.
 - AC-05: Given a canned response has been inserted, when the user reviews it, then the user can edit the response before submitting it, and the template is not sent automatically.
+
+### FR-018: Notifications and Alerts
+
+**Requirement Description:** The system shall notify authorised users about relevant interaction and ticket events based on configured notification rules.
+
+**Preconditions:**
+- The user has successfully logged in.
+- The relevant notification settings are configured.
+- The user has permission to access the related interaction or ticket.
+
+**Trigger:** A configured event occurs, such as a ticket assignment, status change, escalation, or relevant alert condition.
+
+**Expected System Behaviour:**
+1. The system shall identify configured events that require a notification.
+2. The system shall generate notifications for designated recipients according to the configured rules.
+3. The system shall display available notification details, such as event type, related ticket or interaction, and event timestamp.
+4. The system shall provide notifications through supported and configured delivery channels.
+5. The system shall allow authorised users to view available notifications.
+6. The system shall indicate read or unread status where supported.
+7. The system shall respect user permissions and notification settings.
+8. The system shall display an appropriate status or error message when notification delivery fails, where delivery status is available.
+9. The system shall not indicate successful delivery unless confirmation is available.
+
+**Postconditions:**
+- Notifications are generated for applicable configured events.
+- Available notification status reflects the information reported by the system.
+
+**Priority:** Must Have
+
+**Related Business Requirement:** BR-05 — Ticket escalation and notifications.
+
+**Acceptance Criteria:**
+- AC-01: Given a configured event occurs, when the notification rules apply, then the system generates a notification for the designated recipient.
+- AC-02: Given a notification has been generated, when an authorised recipient opens the notification area, then the system displays the available notification details.
+- AC-03: Given notification read status is supported, when a user views a notification, then the system updates its read status according to the configured behaviour.
+- AC-04: Given a user is not authorised to access a related ticket or interaction, when the user attempts to open its details through a notification, then the system prevents unauthorised access.
+- AC-05: Given notification delivery fails and the status is available, when the system reports the outcome, then it displays the appropriate delivery status.
