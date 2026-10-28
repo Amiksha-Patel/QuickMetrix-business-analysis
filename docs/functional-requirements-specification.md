@@ -492,3 +492,42 @@ AI chatbot functionality, CRM-based customer segmentation, and other proposed V2
 - AC-03: Given interaction or ticket data exists for the selected period, when the user opens a relevant report, then the system displays the available metrics.
 - AC-04: Given report export is supported, when the user requests an export, then the system generates the report in a supported format.
 - AC-05: Given no records match the selected reporting criteria, when the report is generated, then the system displays an appropriate empty-state message.
+
+### FR-014: Scheduled Report Delivery
+
+**Requirement Description:** The system shall allow authorised users to configure scheduled delivery of supported reports to designated recipients, subject to system capabilities and permissions.
+
+**Preconditions:**
+- The user has successfully logged in.
+- The user has permission to configure report schedules.
+- The selected report is available and supports scheduled delivery.
+- The required delivery settings are configured.
+
+**Trigger:** An authorised user selects a supported report and configures its delivery schedule.
+
+**Expected System Behaviour:**
+1. The system shall allow authorised users to select a report that supports scheduled delivery.
+2. The system shall allow users to configure the delivery frequency using available scheduling options.
+3. The system shall allow users to specify eligible recipients and the supported delivery method.
+4. The system shall validate the schedule and required recipient details before saving.
+5. The system shall save valid report scheduling settings.
+6. The system shall generate and send the report according to the saved schedule, subject to system and delivery availability.
+7. The system shall allow authorised users to view, update, or deactivate existing report schedules.
+8. The system shall display an appropriate message if a schedule cannot be saved or a delivery attempt fails.
+9. The system shall respect report access permissions when generating and delivering scheduled reports.
+
+**Postconditions:**
+- A valid report schedule is saved and available for authorised users to manage.
+- Scheduled delivery attempts follow the saved configuration.
+- Delivery failures are communicated where the system supports failure notifications.
+
+**Priority:** Should Have
+
+**Related Business Requirement:** BR-09 — Scheduled report delivery.
+
+**Acceptance Criteria:**
+- AC-01: Given a report supports scheduled delivery, when an authorised user selects it, then the system allows the user to configure a delivery schedule.
+- AC-02: Given the user enters valid scheduling and recipient details, when the user saves the configuration, then the system stores the schedule.
+- AC-03: Given a saved schedule becomes due, when the system processes the schedule, then it initiates report generation and delivery according to the configuration.
+- AC-04: Given an authorised user manages an existing schedule, when the user updates or deactivates it, then the system saves the change.
+- AC-05: Given a schedule contains invalid required details, when the user attempts to save it, then the system identifies the invalid or missing information.
