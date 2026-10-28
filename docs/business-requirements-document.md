@@ -70,3 +70,23 @@ V1.0 focuses on centralised interaction monitoring, manual ticket management, cu
 | QA / Testing Team | Verifies that the solution meets documented requirements and identifies defects during testing. |
 
 **Note:** These stakeholders represent the proposed project structure for this portfolio case study. Their inclusion does not imply that the project was implemented in a live production environment.
+
+## 5. Business Requirements
+
+| Requirement ID | Business Requirement | Business Rationale | Priority |
+|---|---|---|---|
+| BR-01 | The system shall provide a centralised inbox for customer interactions and brand mentions from supported digital channels. | Reduce the need to monitor each native platform separately. | Must Have |
+| BR-02 | The system shall allow users to filter and search interactions using available criteria. | Help ORM analysts locate relevant conversations efficiently. | Must Have |
+| BR-03 | The system shall support sentiment identification and tagging of interactions. | Help teams understand customer perceptions and identify sentiment trends. | Must Have |
+| BR-04 | The system shall allow authorised users to create tickets manually, assign them to agents, and update ticket statuses. | Establish a consistent process for tracking customer interactions. | Must Have |
+| BR-05 | The system shall support ticket escalation, notifications, and alerts. | Help teams identify and manage interactions that require attention. | Must Have |
+| BR-06 | The system shall support customer responses across configured communication channels. | Enable ORM teams to manage customer communication through the platform. | Must Have |
+| BR-07 | The system shall provide reusable canned responses. | Improve consistency and efficiency when handling recurring queries. | Should Have |
+| BR-08 | The system shall provide consolidated reports and analytics on interactions and sentiment trends. | Support operational monitoring and business decision-making. | Must Have |
+| BR-09 | The system shall support scheduled report delivery. | Reduce manual effort in recurring reporting activities. | Should Have |
+| BR-10 | The system shall support publishing workflows and a content calendar. | Help teams plan and manage social media publishing activities. | Should Have |
+| BR-11 | The system shall provide crisis monitoring through a centralised command centre. | Help teams monitor potentially critical brand interactions. | Should Have |
+| BR-12 | The system shall support role-based access and platform user administration. | Ensure users access functionality according to their responsibilities. | Must Have |
+| BR-13 | The system shall maintain ticket activity records and audit trails. | Support traceability of ticket updates and actions. | Should Have |
+
+**Note:** These are proposed business-level requirements for the portfolio case study. Detailed functional requirements, acceptance criteria, and validation scenarios will be documented separately in subsequent artefacts.
