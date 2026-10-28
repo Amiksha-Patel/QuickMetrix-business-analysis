@@ -55,15 +55,19 @@ An Agile approach will be used to organise proposed enhancements into user stori
 - Crisis management and real-time command centre
 - Canned responses
 
-### Proposed for V2.0
+### V2.0 — Proposed Enhancements
 
-- AI chatbot for approved platform and brand resources
-- Customer relationship categorisation
-- Improved mobile-browser experience
-- Influencer management
-- Additional integrations
-- Help Center capabilities
-- Interface customisation options
+- **AI Chatbot:** Provide responses using approved brand and platform resources, accessible only to authenticated QuickMetrix users.
+- **CRM-Based Customer Segmentation:** Categorise customers as Customer, Detractor, or Influencer to support targeted engagement.
+- **Influencer Management:** Support influencer identification, tracking, and engagement management.
+- **Personalisation:** Provide Dark Mode, theme settings, and Reset Layout options.
+- **Third-Party Integrations:** Integrate with Salesforce, Shopify, Microsoft Teams, Slack, Freshdesk, and Knowlarity, including WhatsApp and IVR capabilities.
+- **Help Center:** Provide a centralised location for product guidance and support resources.
+- **Mobile Browser Access:** Enable access to QuickMetrix through mobile web browsers without developing a native mobile application.
+
+**Proposed Delivery Approach:** Agile methodology, planned over 12 weeks across 6 sprints, with approximately 36 user stories.
+
+**Scope Note:** V2.0 represents proposed enhancements for this portfolio case study, not features confirmed as implemented in a live production environment.
 
 ### Out of Scope
 
