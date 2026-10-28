@@ -319,3 +319,40 @@ AI chatbot functionality, CRM-based customer segmentation, and other proposed V2
 - AC-03: Given all mandatory fields contain valid information, when the user saves the ticket, then the system creates the ticket and generates a unique reference.
 - AC-04: Given a ticket is created successfully, when the system confirms the creation, then the ticket displays its initial configured status.
 - AC-05: Given a ticket is created from an existing interaction, when the ticket is saved, then the system maintains the association between the ticket and that interaction.
+
+### FR-009: Ticket Assignment and Status Management
+
+**Requirement Description:** The system shall allow authorised users to manually assign tickets to eligible users and update ticket statuses according to the configured workflow.
+
+**Preconditions:**
+- The user has successfully logged in.
+- The user has permission to assign tickets or update ticket statuses.
+- The ticket exists in the system.
+
+**Trigger:** An authorised user opens a ticket and selects an assignment or status update action.
+
+**Expected System Behaviour:**
+1. The system shall display the ticket's current assignee and status, where available.
+2. The system shall allow authorised users to assign or reassign a ticket to an eligible user.
+3. The system shall allow authorised users to update the ticket status using the available workflow statuses.
+4. The system shall validate the selected assignee and status before saving the changes.
+5. The system shall save valid assignment and status changes.
+6. The system shall display the updated assignee and status after a successful update.
+7. The system shall display an appropriate validation or error message if an update fails.
+8. The system shall retain the previously saved assignment or status if an update fails.
+9. Ticket assignment shall be performed manually by an authorised user; AI-based automatic assignment is outside the scope of V1.0.
+
+**Postconditions:**
+- The ticket reflects the saved assignee and status.
+- Unsuccessful updates do not overwrite the previously saved values.
+
+**Priority:** Must Have
+
+**Related Business Requirement:** BR-04 — Manual ticket creation and management.
+
+**Acceptance Criteria:**
+- AC-01: Given a ticket exists, when an authorised user opens it, then the system displays its current assignment and status where available.
+- AC-02: Given a user has permission to assign tickets, when the user selects an eligible assignee and saves the change, then the system updates the ticket assignment.
+- AC-03: Given a user has permission to update ticket statuses, when the user selects a permitted status and saves the change, then the system updates the ticket status.
+- AC-04: Given an invalid assignee or status is selected, when the user attempts to save the change, then the system displays an appropriate validation message.
+- AC-05: Given an assignment or status update fails, when the system processes the request, then the previously saved values remain unchanged.
