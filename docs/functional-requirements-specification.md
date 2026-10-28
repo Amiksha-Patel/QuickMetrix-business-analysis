@@ -684,3 +684,39 @@ AI chatbot functionality, CRM-based customer segmentation, and other proposed V2
 - AC-03: Given notification read status is supported, when a user views a notification, then the system updates its read status according to the configured behaviour.
 - AC-04: Given a user is not authorised to access a related ticket or interaction, when the user attempts to open its details through a notification, then the system prevents unauthorised access.
 - AC-05: Given notification delivery fails and the status is available, when the system reports the outcome, then it displays the appropriate delivery status.
+
+### FR-019: User Roles and Access Control
+
+**Requirement Description:** The system shall control access to features and actions based on configured user roles and permissions.
+
+**Preconditions:**
+- The user has successfully logged in.
+- A user account and role are configured in the system.
+- Role permissions are defined by an authorised administrator.
+
+**Trigger:** A user attempts to access a module, view information, or perform an action.
+
+**Expected System Behaviour:**
+1. The system shall associate each user account with an assigned role.
+2. The system shall restrict access to modules and actions according to the user's role and configured permissions.
+3. The system shall support the roles and access levels configured for the V1.0 implementation.
+4. The system shall prevent users from performing actions for which they do not have permission.
+5. The system shall apply access restrictions to both interface actions and requests to protected functions.
+6. The system shall allow authorised administrators to assign or update user roles according to their permissions.
+7. The system shall display an appropriate message when a user attempts an unauthorised action.
+8. The system shall ensure that users can access only the information permitted by their configured access rights.
+
+**Postconditions:**
+- Users can access permitted features and information.
+- Unauthorised actions are blocked.
+
+**Priority:** Must Have
+
+**Related Business Requirement:** BR-12 — User administration and access control.
+
+**Acceptance Criteria:**
+- AC-01: Given a user has an assigned role, when the user logs in, then the system provides access according to the role's configured permissions.
+- AC-02: Given a user lacks permission to access a module, when the user attempts to open it, then the system prevents access.
+- AC-03: Given a user lacks permission to perform an action, when the user attempts that action, then the system blocks the request.
+- AC-04: Given an authorised administrator updates a user's role, when the change is saved successfully, then the system applies the permissions associated with the updated role.
+- AC-05: Given a user attempts to access protected information without permission, when the system evaluates the request, then it denies access to that information.
