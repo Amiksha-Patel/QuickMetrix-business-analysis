@@ -571,3 +571,42 @@ AI chatbot functionality, CRM-based customer segmentation, and other proposed V2
 - AC-03: Given scheduled content has not yet been published, when an authorised user edits it before publication, then the system saves the permitted changes.
 - AC-04: Given content is submitted for publication, when the connected channel confirms the outcome, then the system updates the publication status accordingly.
 - AC-05: Given content fails validation or the connected channel is unavailable, when the user attempts to schedule or publish it, then the system displays an appropriate message.
+
+### FR-016: Crisis Management and Command Centre
+
+**Requirement Description:** The system shall allow authorised users to monitor potential brand crises, identify relevant interactions, and coordinate crisis-related activities through a centralised interface.
+
+**Preconditions:**
+- The user has successfully logged in.
+- The user has permission to access crisis management features.
+- Relevant interaction data is available from configured, supported channels.
+- Crisis monitoring rules or criteria are configured where required.
+
+**Trigger:** An authorised user opens the crisis management module or reviews interactions that meet configured crisis-monitoring criteria.
+
+**Expected System Behaviour:**
+1. The system shall provide a centralised view of relevant interactions associated with configured crisis-monitoring criteria.
+2. The system shall allow authorised users to review interaction details, including source channel, timestamp, content, sentiment, and tags where available.
+3. The system shall allow users to identify and flag interactions for crisis monitoring.
+4. The system shall allow authorised users to record or update crisis-related information using the available functionality.
+5. The system shall display relevant alerts when configured monitoring conditions are met, where supported.
+6. The system shall allow authorised users to review related interactions to support crisis assessment.
+7. The system shall restrict crisis information and actions according to configured user permissions.
+8. The system shall display an appropriate message when relevant interaction data or crisis-monitoring information cannot be retrieved.
+9. The system shall not represent a potential crisis as automatically confirmed solely because a monitoring condition has been met.
+
+**Postconditions:**
+- Relevant interactions can be reviewed in the crisis management interface.
+- Crisis flags and related information are saved when successfully submitted.
+- Configured alerts are displayed according to system settings and available data.
+
+**Priority:** Must Have
+
+**Related Business Requirement:** BR-11 — Crisis management and monitoring.
+
+**Acceptance Criteria:**
+- AC-01: Given an authorised user has access to crisis management, when the user opens the module, then the system displays relevant available crisis-monitoring information.
+- AC-02: Given an interaction is relevant to crisis monitoring, when an authorised user flags it, then the system saves the crisis flag.
+- AC-03: Given configured monitoring conditions are met, when the system evaluates available interaction data, then it displays an alert where the configured functionality supports it.
+- AC-04: Given an authorised user updates crisis-related information, when the changes are valid and saved, then the system displays the updated information.
+- AC-05: Given a user lacks the required permission, when the user attempts a restricted crisis-management action, then the system prevents the unauthorised action.
