@@ -90,3 +90,25 @@ V1.0 focuses on centralised interaction monitoring, manual ticket management, cu
 | BR-13 | The system shall maintain ticket activity records and audit trails. | Support traceability of ticket updates and actions. | Should Have |
 
 **Note:** These are proposed business-level requirements for the portfolio case study. Detailed functional requirements, acceptance criteria, and validation scenarios will be documented separately in subsequent artefacts.
+
+## 6. Assumptions and Constraints
+
+### 6.1 Assumptions
+
+- The organisation has access to the digital channels supported by the QuickMetrix platform.
+- Customer interactions and brand mentions can be retrieved from supported channels through configured integrations or platform connections.
+- ORM analysts and authorised users will manually create tickets, assign them to agents, and update ticket statuses.
+- Sentiment identification and tagging capabilities will be available to support interaction analysis.
+- Users will receive access according to their assigned roles and permissions.
+- Business users will participate in requirements validation and user acceptance testing.
+- Reporting outputs will depend on the availability and quality of interaction data.
+
+### 6.2 Constraints
+
+- V1.0 functionality is limited to the approved project scope documented in this case study.
+- Access to digital-channel data depends on the permissions, APIs, and limitations of the respective platforms.
+- Automated ticket creation and AI-based ticket assignment are excluded from V1.0.
+- AI chatbot functionality, CRM-based customer segmentation, and other planned enhancements are reserved for the proposed V2.0 scope.
+- Native mobile application development is excluded from V1.0.
+- The case study does not claim actual production deployment, measured business benefits, or verified implementation outcomes.
+
