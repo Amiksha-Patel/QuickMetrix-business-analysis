@@ -531,3 +531,43 @@ AI chatbot functionality, CRM-based customer segmentation, and other proposed V2
 - AC-03: Given a saved schedule becomes due, when the system processes the schedule, then it initiates report generation and delivery according to the configuration.
 - AC-04: Given an authorised user manages an existing schedule, when the user updates or deactivates it, then the system saves the change.
 - AC-05: Given a schedule contains invalid required details, when the user attempts to save it, then the system identifies the invalid or missing information.
+
+### FR-015: Publishing and Content Calendar
+
+**Requirement Description:** The system shall allow authorised users to create, schedule, manage, and publish content through supported, connected digital channels.
+
+**Preconditions:**
+- The user has successfully logged in.
+- The user has permission to access publishing features.
+- The target channel is supported and connected.
+- The user's account has the necessary permissions to publish through the target channel.
+
+**Trigger:** The user opens the publishing module and creates new content or selects an existing scheduled item.
+
+**Expected System Behaviour:**
+1. The system shall allow authorised users to create and edit content for supported channels.
+2. The system shall allow users to select a supported channel or channels for publishing, subject to channel-specific limitations.
+3. The system shall allow users to schedule content by selecting an available publication date and time.
+4. The system shall display scheduled content in a calendar or equivalent scheduling view.
+5. The system shall allow authorised users to view and update scheduled content before publication, where supported.
+6. The system shall validate required content fields and channel-specific requirements before scheduling or publishing.
+7. The system shall display the publication status based on the available channel response.
+8. The system shall display an appropriate message when content cannot be scheduled or published.
+9. The system shall restrict publishing actions according to user permissions and connected-channel access.
+10. The system shall not mark content as successfully published unless the available channel response confirms publication.
+
+**Postconditions:**
+- Valid content and scheduling details are saved.
+- Scheduled content appears in the publishing calendar.
+- Publication status reflects the available result from the connected channel.
+
+**Priority:** Must Have
+
+**Related Business Requirement:** BR-10 — Publishing and content scheduling.
+
+**Acceptance Criteria:**
+- AC-01: Given an authorised user has access to a connected supported channel, when the user creates valid content, then the system allows the content to be prepared for publishing.
+- AC-02: Given valid content and scheduling details are provided, when the user schedules the content, then the system saves it and displays it in the publishing calendar.
+- AC-03: Given scheduled content has not yet been published, when an authorised user edits it before publication, then the system saves the permitted changes.
+- AC-04: Given content is submitted for publication, when the connected channel confirms the outcome, then the system updates the publication status accordingly.
+- AC-05: Given content fails validation or the connected channel is unavailable, when the user attempts to schedule or publish it, then the system displays an appropriate message.
